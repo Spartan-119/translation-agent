@@ -5,7 +5,7 @@ import gradio as gr
 import pymupdf
 from icecream import ic
 from langchain_text_splitters import RecursiveCharacterTextSplitter
-from patch import (
+from app.patch import (
     calculate_chunk_size,
     model_load,
     multichunk_improve_translation,
