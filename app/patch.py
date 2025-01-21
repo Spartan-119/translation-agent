@@ -6,7 +6,7 @@ from typing import Optional, Union
 
 import gradio as gr
 import openai
-import translation_agent.utils as utils
+import src.translation_agent.utils as utils
 
 
 RPM = 60
