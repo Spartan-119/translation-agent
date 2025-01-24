@@ -11,7 +11,11 @@ from app.process import (
 )
 
 # **Page Configuration**
-st.set_page_config(page_title="Translation Agent", layout="wide")
+st.set_page_config(
+    page_title="Translation Agent",
+    page_icon="static/GIMO-logo.webp",  # Path to your logo
+    layout="wide"
+)
 
 # **Custom Styling**
 st.markdown(
@@ -54,10 +58,14 @@ st.markdown(
     unsafe_allow_html=True,
 )
 
-# **Logo (Smaller & Centered)**
-logo_path = "static/GIMO-logo.webp"
-if os.path.exists(logo_path):
-    st.image(logo_path, use_container_width=False)
+# # Centered Logo Using st.image()
+# logo_path = "static/GIMO-logo.webp"
+# if os.path.exists(logo_path):
+#     col1, col2, col3 = st.columns([1, 3, 1])  # Creates three columns
+#     with col2:
+#         st.image(logo_path)
+
+
 
 st.markdown('<div class="title-container"><div class="title-text">GIMO Translation Agent</div></div>', unsafe_allow_html=True)
 
@@ -116,25 +124,25 @@ with st.sidebar:
     st.header("Translation Settings")
 
     # **Dropdowns for Language & Country**
-    source_lang = st.selectbox("Source Language", ["English", "French", "Dutch", "German", "Romanian", "Italian", "Spanish", "Portuguese"], index=0)
-    target_lang = st.selectbox("Target Language", ["", "English", "French", "Dutch", "German", "Romanian", "Italian", "Spanish", "Portuguese"], index=0)
-    country = st.selectbox("Country", ["", "UK", "France", "Germany", "Switzerland", "Denmark", "Romania", "Italy", "Brazil", "Spain"], index=0)
+    source_lang = st.selectbox("Source Language", ["English", "French", "Dutch", "German", "Romanian", "Italian", "Spanish", "Portuguese", "Finnish", "Danish", "Greek"], index=0)
+    target_lang = st.selectbox("Target Language", ["", "English", "French", "Dutch", "German", "Romanian", "Italian", "Spanish", "Portuguese", "Finnish", "Danish", "Greek"], index=0)
+    country = st.selectbox("Country", ["", "UK", "France", "Germany", "Switzerland", "Denmark", "Romania", "Italy", "Brazil", "Spain", "Greece", "Finalnd", "Netherlands"], index=0)
 
     st.subheader("Advanced Options")
     max_tokens = st.slider("Max Tokens Per Chunk", min_value=512, max_value=2046, value=1000, step=8)
     temperature = st.slider("Temperature", min_value=0.0, max_value=1.0, value=0.3, step=0.1)
     rpm = st.slider("Requests Per Minute", min_value=1, max_value=1000, value=60, step=1)
 
+# **Session State Initialization**
+if "translation_output" not in st.session_state:
+    st.session_state["translation_output"] = ""
+
 # **Two-Column Layout (Left: Source, Right: Target)**
 col1, col2 = st.columns(2)
 
 with col1:
     st.subheader("Source Text")
-    source_text = st.text_area("Enter text in English:", height=250)
-
-with col2:
-    st.subheader("Translated Text")
-    target_text_placeholder = st.empty()  # Placeholder for translation output
+    source_text = st.text_area("Enter text in English:", height=250, key="source_text")
 
 # **File Upload (Now Below Left Panel)**
 st.markdown("---")  # Adds a separator line
@@ -142,20 +150,30 @@ file = st.file_uploader("Upload File", type=["pdf", "txt", "py", "docx", "json",
 if file:
     source_text = read_doc(file)
 
-# **Translate Button (Now Below Right Panel)**
-st.markdown("---")  # Adds a separator line
-translate_button = st.button("Translate")
-
-# **Translation Execution**
-if translate_button:
-    if not source_text.strip():
+# **Function to Perform Translation and Update Session State**
+def translate():
+    if not st.session_state.source_text.strip():
         st.warning("Please enter text to translate.")
-    elif not target_lang or not country:
+        return
+
+    if not target_lang or not country:
         st.warning("Please select a target language and country.")
-    else:
+        return
+
+    with st.spinner("Translating... Please wait"):
         final_translation = huanik(
-            source_lang, target_lang, source_text, country, max_tokens, temperature, rpm
+            source_lang, target_lang, st.session_state.source_text, country, max_tokens, temperature, rpm
         )
 
         if final_translation:
-            target_text_placeholder.text_area("Translated Output:", value=final_translation, height=250)
+            st.session_state.translation_output = final_translation  # Update session state
+
+
+# **Translate Button with `on_click` to Modify State**
+st.markdown("---")  # Adds a separator line
+st.button("Translate", on_click=translate)
+
+# **Displaying Translated Text**
+with col2:
+    st.subheader("Translated Text")
+    st.text_area("Translated Output:", value=st.session_state.translation_output, height=250, key="translated_output")
