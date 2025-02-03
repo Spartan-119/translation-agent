@@ -86,86 +86,43 @@ def diff_texts(text1, text2):
     return highlighted_text
 
 
-# modified from src.translaation-agent.utils.tranlsate
-def translator(
-    source_lang: str,
-    target_lang: str,
-    source_text: str,
-    country: str,
-    max_tokens: int = 1000,
-):
-    """Translate the source_text from source_lang to target_lang."""
+def translator(source_lang, target_lang, source_text, tone, country, max_tokens=1000):
+    """Translate the source_text from source_lang to target_lang with a given tone."""
+    
     num_tokens_in_text = num_tokens_in_string(source_text)
-
+    
     ic(num_tokens_in_text)
 
     if num_tokens_in_text < max_tokens:
         ic("Translating text as single chunk")
 
         progress((1, 3), desc="First translation...")
-        init_translation = one_chunk_initial_translation(
-            source_lang, target_lang, source_text
-        )
+        init_translation = one_chunk_initial_translation(source_lang, target_lang, source_text, tone)
 
         progress((2, 3), desc="Reflection...")
-        reflection = one_chunk_reflect_on_translation(
-            source_lang, target_lang, source_text, init_translation, country
-        )
+        reflection = one_chunk_reflect_on_translation(source_lang, target_lang, source_text, init_translation, tone, country)
 
         progress((3, 3), desc="Second translation...")
-        final_translation = one_chunk_improve_translation(
-            source_lang, target_lang, source_text, init_translation, reflection
-        )
-
-        return init_translation, reflection, final_translation
+        final_translation = one_chunk_improve_translation(source_lang, target_lang, source_text, init_translation, reflection, tone)
 
     else:
         ic("Translating text as multiple chunks")
 
-        token_size = calculate_chunk_size(
-            token_count=num_tokens_in_text, token_limit=max_tokens
-        )
-
-        ic(token_size)
-
-        text_splitter = RecursiveCharacterTextSplitter.from_tiktoken_encoder(
-            model_name="gpt-4",
-            chunk_size=token_size,
-            chunk_overlap=0,
-        )
-
+        token_size = calculate_chunk_size(num_tokens_in_text, max_tokens)
+        text_splitter = RecursiveCharacterTextSplitter.from_tiktoken_encoder(model_name="gpt-4", chunk_size=token_size, chunk_overlap=0)
         source_text_chunks = text_splitter.split_text(source_text)
 
         progress((1, 3), desc="First translation...")
-        translation_1_chunks = multichunk_initial_translation(
-            source_lang, target_lang, source_text_chunks
-        )
+        translation_1_chunks = multichunk_initial_translation(source_lang, target_lang, source_text_chunks, tone)
 
-        init_translation = "".join(translation_1_chunks)
-
-        progress((2, 3), desc="Reflection...")
-        reflection_chunks = multichunk_reflect_on_translation(
-            source_lang,
-            target_lang,
-            source_text_chunks,
-            translation_1_chunks,
-            country,
-        )
-
-        reflection = "".join(reflection_chunks)
+        reflection_chunks = multichunk_reflect_on_translation(source_lang, target_lang, source_text_chunks, translation_1_chunks, tone, country)
 
         progress((3, 3), desc="Second translation...")
-        translation_2_chunks = multichunk_improve_translation(
-            source_lang,
-            target_lang,
-            source_text_chunks,
-            translation_1_chunks,
-            reflection_chunks,
-        )
+        translation_2_chunks = multichunk_improve_translation(source_lang, target_lang, source_text_chunks, translation_1_chunks, reflection_chunks, tone)
 
         final_translation = "".join(translation_2_chunks)
 
-        return init_translation, reflection, final_translation
+    return final_translation
 
 
 def translator_sec(

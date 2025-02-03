@@ -58,15 +58,6 @@ st.markdown(
     unsafe_allow_html=True,
 )
 
-# # Centered Logo Using st.image()
-# logo_path = "static/GIMO-logo.webp"
-# if os.path.exists(logo_path):
-#     col1, col2, col3 = st.columns([1, 3, 1])  # Creates three columns
-#     with col2:
-#         st.image(logo_path)
-
-
-
 st.markdown('<div class="title-container"><div class="title-text">GIMO Translation Agent</div></div>', unsafe_allow_html=True)
 
 # **Helper Function: Translation Workflow**
@@ -78,6 +69,7 @@ def huanik(
     max_tokens: int,
     temperature: float,
     rpm: int,
+    tone: int,
 ):
     if not source_text or not target_lang or not country:
         st.error("Please select all required options before translating.")
@@ -91,12 +83,8 @@ def huanik(
 
     source_text = re.sub(r"(?m)^\s*$\n?", "", source_text)
 
-    _, _, final_translation = translator(
-        source_lang=source_lang,
-        target_lang=target_lang,
-        source_text=source_text,
-        country=country,
-        max_tokens=max_tokens,
+    final_translation = translator(
+        source_lang, target_lang, source_text, tone, country, max_tokens
     )
 
     return final_translation
@@ -127,11 +115,24 @@ with st.sidebar:
     source_lang = st.selectbox("Source Language", ["English", "French", "Dutch", "German", "Romanian", "Italian", "Spanish", "Portuguese", "Finnish", "Danish", "Greek"], index=0)
     target_lang = st.selectbox("Target Language", ["", "English", "French", "Dutch", "German", "Romanian", "Italian", "Spanish", "Portuguese", "Finnish", "Danish", "Greek"], index=0)
     country = st.selectbox("Country", ["", "UK", "France", "Germany", "Switzerland", "Denmark", "Romania", "Italy", "Brazil", "Spain", "Greece", "Finalnd", "Netherlands"], index=0)
+    
+    # **Tone Selection with Dynamic Label**
+    tone_labels = {
+        1: "Very Informal",
+        2: "Informal",
+        3: "Neutral",
+        4: "Formal",
+        5: "Very Formal"
+    }
+    
+    tone = st.slider("Translation Tone", min_value=1, max_value=5, value=3, step=1)
+    st.markdown(f"**Selected Tone:** {tone} - {tone_labels[tone]}")
 
-    st.subheader("Advanced Options")
-    max_tokens = st.slider("Max Tokens Per Chunk", min_value=512, max_value=2046, value=1000, step=8)
-    temperature = st.slider("Temperature", min_value=0.0, max_value=1.0, value=0.3, step=0.1)
-    rpm = st.slider("Requests Per Minute", min_value=1, max_value=1000, value=60, step=1)
+    # **Advanced Options (Collapsed by Default)**
+    with st.expander("Advanced Options", expanded=False):
+        max_tokens = st.slider("Max Tokens Per Chunk", min_value=512, max_value=2046, value=1000, step=8)
+        temperature = st.slider("Temperature", min_value=0.0, max_value=1.0, value=0.3, step=0.1)
+        rpm = st.slider("Requests Per Minute", min_value=1, max_value=1000, value=60, step=1)
 
 # **Session State Initialization**
 if "translation_output" not in st.session_state:
@@ -162,7 +163,7 @@ def translate():
 
     with st.spinner("Translating... Please wait"):
         final_translation = huanik(
-            source_lang, target_lang, st.session_state.source_text, country, max_tokens, temperature, rpm
+            source_lang, target_lang, st.session_state.source_text, country, max_tokens, temperature, rpm, tone
         )
 
         if final_translation:
