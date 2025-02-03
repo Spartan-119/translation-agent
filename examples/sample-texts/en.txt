@@ -1,0 +1,172 @@
+EN
+
+Will you win 75 Free Spins [%FIRST_NAME%]?
+https://gmrd.atlassian.net/browse/NCON-12121
+"Want some free spins? Simply bet on any slot to receive a mystery amount every day
+http://nbet.co/mba-en
+T&Cs apply. Opt out: eu.stp3.co
+What Will the Mystery Box Bring You?
+Win up to 75 Free Spins daily with the Mystery Box
+Available on Fire Joker T&cs Apply
+https://casino.netbet.com/en/mystery-box-august24"
+https://gmrd.atlassian.net/browse/NCON-12520
+[%FIRST_NAME%], claim 5 Free Spins on Razor Shark!
+https://gmrd.atlassian.net/browse/NCON-12545
+Daily Free Gifts are Waiting, [%FIRST_NAME%]!
+"Daily free gifts until 2025 with any deposit {{ user.first_name }} > nbet.co/xmas-eu
+Terms apply. Opt-out: eu.stp3.co
+Daily free gifts are waiting
+You could win up to €100 every day when you deposit on NetBet - T&C apply
+https://casino.netbet.com/stocking-filler"
+https://gmrd.atlassian.net/browse/NCON-12525
+"Fancy winning part of our €500k Festive Prize Pool [%FIRST_NAME%]?
+Have you joined our Festive Fourtunes tournament [%FIRST_NAME%]?"
+"Festive Fortunes is now live! €500k in prizes and daily drops on Games Global slots. - http://nbet.co/500f-eu
+T&Cs apply.
+Terms apply. Opt-out: eu.stp3.co
+Festive Fortunes is here!
+€500k Prizepool on Games Global slots.
+Terms apply. Opt-out: eu.stp3.co
+https://casino.netbet.com/festive-fortunes"
+"Our Festive Fortunes promotion is still on! €500k in prizes and daily drops on Games Global slots. - http://nbet.co/500f-eu
+T&Cs apply.
+Opt-out: eu.stp3.co
+Festive Fortunes is still on!
+Huge Cash Prizepool on Games Global slots.
+Terms apply. Opt-out: eu.stp3.co
+https://casino.netbet.com/festive-fortunes"
+https://gmrd.atlassian.net/browse/NCON-12217
+We have something good for you, up to 50% Bonus, [%FIRST_NAME%]!
+"Want an offer to see out the summer? Get a 50% Bonus on your next deposit. > http://nbet.co/sep50-uk
+Terms apply. Opt-out: eu.stp3.co 
+Get a 50% Bonus on Your Next Deposit 
+Use deposit code: SEPD50G50
+T&Cs apply. https://casino.netbet.co.uk/SEP-D50G50"
+https://gmrd.atlassian.net/browse/NCON-12310
+Will you get a Wicked Win cash prize [%FIRST_NAME%]?
+"Our Wicked Wins Tournament is now live! €500k in prizes and daily drops. > http://nbet.co/ww-en
+T&Cs apply. Opt out: eu.stp3.co""
+Our WIcked Wins Tournament is LIVE!
+With €500k in Prizes - T&Cs apply
+https://casino.netbet.com/en/wicked-wins"
+https://gmrd.atlassian.net/browse/NCON-12389
+Will you be treated to a £10k Prize Drop [%FIRST_NAME%]?
+"Pragmatic Play's Hallowins is here with a spine-tingling €700k in prizes {{ user.first_name }} > nbet.co/700k-eu
+Terms apply. Opt-out: eu.stp3.co
+Pragmatic Play's Hallowins is ALIVE! 
+€700k in Pride Drops up for grabs - T&C apply
+https://casino.netbet.com/700k-hallowins-pragmatic"
+https://gmrd.atlassian.net/browse/NCON-12374
+[%FIRST_NAME%] get more with your next deposit with a 75% Bonus!
+"Want an amazing Bonus? Get a 75% Boost on your next deposit!
+Terms apply. Opt-out: eu.stp3.co
+Up to 75% Bonus on Your Deposit 
+Use deposit code: D75G25
+T&Cs apply. https://casino.netbet.com/en/D75G25 "
+https://gmrd.atlassian.net/browse/NCON-12311
+The Haunted Vault is Opening [FIRST_NAME]!
+"The haunted vault is here {{ user.first_name }} ! €75k in prizes. > http://nbet.co/hv-en
+Terms apply. Opt-out: eu.stp3.co 
+What’s Inside the Haunted Vault!
+€75k Prize pool. On Play’n GO slots
+T&Cs apply.
+https://casino.netbet.com/haunted-vault"
+https://gmrd.atlassian.net/browse/NCON-12518
+Big savings at the Club Shop sale, [%FIRST_NAME%]! 
+"The Club Shop winter sale is on, {{ user.first_name }}!
+Get up to 70% off items in the Club Shop. > nbet.co/shop-eu
+Terms apply. Opt-out: eu.stp3.co
+Our winter Club Shop sale is here!
+Get up to 70% off Club Shop items.
+T&Cs apply.
+https://casino.netbet.com/club-shop-sale"
+https://gmrd.atlassian.net/browse/NCON-12524
+Have you joined our Holiday Rush Tournament, [%FIRST_NAME%]?
+"€900k in Prizes inlcuding Daily Prize Drops with Pragmatic Play Holiday Rush - http://nbet.co/hr-eu
+T&Cs apply.
+Opt-out: eu.stp3.co
+Pragmatic Play's Holiday Rush is LIVE! 
+€900k in prizes.
+Terms apply. Opt-out: eu.stp3.co
+https://casino.netbet.com/holiday-rush"
+https://gmrd.atlassian.net/browse/NCON-12458
+"Black Friday Festival: Daily Prizes Await You [%FIRST_NAME%]!
+There's still plenty to win in our Black Friday Festival [%FIRST_NAME%]"
+"Our Black Friday Festival is HERE! Daily Prizes Await {{ user.first_name }} > http://nbet.co/bfwf-eu
+Terms apply. Opt-out: eu.stp3.co
+Our Black Friday Festival is HERE! 
+7 Daily Prizes to be Won - T&C apply
+https://casino.netbet.com/black-friday-all-week-fest
+Our Black Friday Festival is still HERE! Daily Prizes Await {{ user.first_name }} > nbet.co/bfwf-eu
+Terms apply. Opt-out: eu.stp3.co
+Our Black Friday Festival is HERE! 
+3 more Daily Prizes to be Won - T&C apply
+https://casino.netbet.com/black-friday-all-week-fest"
+https://gmrd.atlassian.net/browse/NCON-12424
+Win Up To €25 in Free Live Casino Games Daily, [%FIRST_NAME%]!
+"Win Free Live Casino Games daily with our Magic Chip promotion  {{ user.first_name }} > nbet.co/DFGE-eu
+T&Cs apply. Opt-out: eu.stp3.co
+MAGIC CHIPS ARE HERE 
+Win Free Live Casino Games daily - T&Cs apply
+https://casino.netbet.com/magic-chip-daily-free-game-evo"
+https://gmrd.atlassian.net/browse/NCON-12323
+It's party time [%FIRST_NAME%], win Free Live Casino Games daily!
+"Win Free Live Casino Games daily with our Roulette Party  {{ user.first_name }} > nbet.co/rpfg-eu
+T&Cs apply. Opt-out: eu.stp3.co
+Join our Roulette Party
+Win Free Live Casino Games daily - T&Cs apply
+https://casino.netbet.com/en/roulette-party"
+https://gmrd.atlassian.net/browse/NCON-12362
+A daily Free Game at the Roulette Party, [%FIRST_NAME%]!
+"Let's party on Evolution Live Roulettes! Daily FREE GAME up to €25 for 2 weeks...Check it out! nbet.co/rpfg-eu
+Terms apply. Opt out: eu.stp3.co
+ROULETTE PARTY!
+14 chances up to €25 in our Free Game for you.
+>https://casino.netbet.com/roulette-party-daily-free-game"
+https://gmrd.atlassian.net/browse/NCON-12072
+Claim your Bonus and Book of Dead Free Spins [%FIRST_NAME%]!
+"Explore the wonders of Book of Dead with a 100% Bonus and 15 Free Spins when you deposit next.
+>http://nbet.co/100b-en
+T&Cs Apply, Opt out http://eu.stp3.co/
+100% Bonus and Book Of Dead Free Spins
+Up to €50 instantly with code: 100bonus15fs
+https://casino.netbet.com/100bonus15fs"
+https://gmrd.atlassian.net/browse/NCON-12136
+Have you claimed your deposit bonus and Free Spins  [%FIRST_NAME%]?
+https://gmrd.atlassian.net/browse/NCON-12122
+"Want Some Great Prizes? 
+You can claim a great bonus AND Free Spins http://nbet.co/7510-en
+T&Cs apply. Opt out: eu.stp3.co
+Get a 75% Bonus and 10 Free Spins on your next deposit.
+Use code 75BONUS10FS to claim
+T&Cs Apply
+https://casino.netbet.com/75bonus10fs"
+https://gmrd.atlassian.net/browse/NCON-12092
+"Your Free Daily Prize is Waiting [%FIRST_NAME%]!
+Want a Free Prize? Our Summer Retreat is still on!
+Simply log in and play our mini game, pick an item and you’ll win one of our many amazing prizes.
+Feel the heat while it lasts with NetBet’s Summer retreat T&Cs Apply.     
+Get Your Free Prize [%FIRST_NAME%]!
+Free Summer Prizes won’t last long
+Log in and play our summer retreat now to claim while you can. Simply log in and play Summer Retreat. Pick any item and you’ll be rewarded with a prize, absolutely free. You could win free spins, net points and much more.
+Act now before the summer heat is gone, T&Cs apply
+Free Daily Prizes 
+Still Available this Summer [%FIRST_NAME%]
+T&Cs apply. Opt-out: eu.stp3.co
+>https://casino.netbet.co.uk/summer-retreat
+Don’t Forget to Get your Free Daily Prize this Summer [%FIRST_NAME%]. > http://nbet.co/sruk
+T&Cs apply. Opt-out: eu.stp3.co
+Last Chance for Free Summer Prizes with Summer Retreat [%FIRST_NAME%]
+T&Cs apply. Opt-out: eu.stp3.co
+>https://casino.netbet.co.uk/summer-retreat
+Get Your Free Daily Prize Before Summers Over [%FIRST_NAME%] > http://nbet.co/sruk
+T&Cs apply. Opt-out: eu.stp3.co"
+https://gmrd.atlassian.net/browse/NCON-12364
+"Pick a mask to reveal your daily Free Prize, [%FIRST_NAME%]!
+Which mask are you picking today [%FIRST_NAME%]?"
+"Daily free prizes for you until 05/11! No tricks just treats on NetBet's Halloween Minigame!
+nbet.co/hallo-w-eu
+Terms apply. Opt out: eu.stp3.co
+Daily free prizes until 05/11, {{ user.first_name }}
+Happy Halloween 🎃💀
+>https://casino.netbet.com/hallo-win"
