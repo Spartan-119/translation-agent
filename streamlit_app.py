@@ -112,9 +112,9 @@ with st.sidebar:
     st.header("Translation Settings")
 
     # **Dropdowns for Language & Country**
-    source_lang = st.selectbox("Source Language", ["English", "French", "Dutch", "German", "Romanian", "Italian", "Spanish", "Portuguese", "Finnish", "Danish", "Greek"], index=0)
-    target_lang = st.selectbox("Target Language", ["", "English", "French", "Dutch", "German", "Romanian", "Italian", "Spanish", "Portuguese", "Finnish", "Danish", "Greek"], index=0)
-    country = st.selectbox("Country", ["", "UK", "France", "Germany", "Switzerland", "Denmark", "Romania", "Italy", "Brazil", "Spain", "Greece", "Finalnd", "Netherlands"], index=0)
+    source_lang = st.selectbox("Source Language", ["English", "French", "Dutch", "German", "Romanian", "Italian", "Spanish", "Portuguese", "Finnish", "Danish", "Greek", "Turkish"], index=0)
+    target_lang = st.selectbox("Target Language", ["", "English", "French", "Dutch", "German", "Romanian", "Italian", "Spanish", "Portuguese", "Finnish", "Danish", "Greek", "Turkish"], index=0)
+    country = st.selectbox("Country", ["", "UK", "France", "Germany", "Switzerland", "Denmark", "Romania", "Italy", "Brazil", "Spain", "Greece", "Finalnd", "Netherlands", "Turkey"], index=0)
     
     # **Tone Selection with Dynamic Label**
     tone_labels = {
