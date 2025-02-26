@@ -76,7 +76,7 @@ def huanik(
         return None
 
     try:
-        model_load("OpenAI", "", "gpt-4o", "", temperature, rpm)  # Default values
+        model_load("OpenAI", "", "gpt-4-turbo-preview", "", temperature, rpm)  # Default values
     except Exception as e:
         st.error(f"An unexpected error occurred: {e}")
         return None
