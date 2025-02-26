@@ -115,6 +115,7 @@ def create_translation_prompt(text: str, terms: Dict[str, str], source_lang: str
     prompt += "IMPORTANT TRANSLATION RULES:\n"
     prompt += "1. Maintain the same formatting and line breaks\n"
     prompt += "2. Keep any [[terms]] markers in the translation\n"
+    prompt += "3. ONLY RETURN THE TRANSLATED TEXT. DO NOT INCLUDE ANY INSTRUCTIONS OR PROMPTS IN YOUR RESPONSE.\n"
     
     if terms:
         prompt += "\nGlossary terms to use:\n"
